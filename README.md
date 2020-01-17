@@ -1,5 +1,7 @@
 # mcdiceface
 
+A silly web game for smart phones. You can find a [live demo here](https://mcdiceface.netlify.com).
+
 ## Project setup
 ```
 yarn install
@@ -19,6 +21,3 @@ yarn build
 ```
 yarn lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
