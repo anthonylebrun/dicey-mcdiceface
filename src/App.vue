@@ -1,28 +1,44 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <PlayView v-if="gameStarted" />
+    <InstructionsView v-else @click.native="startGame" />
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import InstructionsView from "./views/Instructions.vue";
+import PlayView from "./views/Play.vue";
 
 export default {
   name: "app",
+
   components: {
-    HelloWorld
+    InstructionsView,
+    PlayView
+  },
+
+  data() {
+    return {
+      gameStarted: false
+    };
+  },
+
+  methods: {
+    startGame() {
+      this.gameStarted = true;
+    }
   }
 };
 </script>
 
 <style lang="scss">
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@import "@/styles/global";
+
+html,
+body,
+#app,
+#app > * {
+  width: 100%;
+  height: 100%;
 }
 </style>

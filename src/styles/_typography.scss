@@ -1,0 +1,21 @@
+@import "./variables";
+@import url('https://fonts.googleapis.com/css?family=Archivo:400,700&display=swap');
+
+html, body {
+  font-family: map-get($fonts, primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+}
+
+.title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: map-get($colors, dark);
+}
+
+.paragraph {
+  font-size: 1rem;
+  font-weight: 400;
+  color: map-get($colors, light);
+}
